@@ -1,2 +1,2 @@
 # POS
-Write, compile and run Brainf**k on an 8-bit computer
+Pseudo-Operating System. I have an 8-bit computer and want to write brainf**k programs that can run on the computer. But what if I wrote, compiled and ran the programs on the 8-bit computer itself? I have no idea if this is possible, wish me luck.
