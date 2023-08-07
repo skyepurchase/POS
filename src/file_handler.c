@@ -5,7 +5,7 @@ char *file_to_string(char *filename) {
     FILE *file = fopen(filename, "r");
 
     if (file == NULL) {
-        printf("Could not open %s to convert to string", filename);
+        printf("Could not open %s to convert to string.\n", filename);
         return NULL;
     }
 

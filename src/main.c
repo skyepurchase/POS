@@ -13,10 +13,9 @@ int main(int argc, char *argv[]) {
     char *program = file_to_string(argv[1]);
 
     if (program == NULL) {
-        printf("Couldn't load program from %s.", argv[1]);
+       printf("Could not load program from %s.\n", argv[1]);
+       return -1;
     }
-
-    printf("%s", program);
 
     FILE *file_to_write = fopen(argv[2], "w");
 
@@ -25,14 +24,13 @@ int main(int argc, char *argv[]) {
         return -1;
     }
 
-    int size = 10;
-    int id;
-    for (id = 0; id < size; ++id) {
-        char c = program[id];
+    while (*program != '\0') {
+        char c = *program;
         if (c == '+') {
             c = '-';
         }
         fputc(c, file_to_write);
+        program++;
     }
 
     fclose(file_to_write);
