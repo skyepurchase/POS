@@ -13,7 +13,7 @@ typedef enum {
     FAIL
 } token;
 
-token *lex(FILE *input_file);
+token *tokenize(char *input_file);
 
 void parse(token *tokens);
 
