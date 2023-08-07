@@ -1,4 +1,4 @@
-CC=clang
+CC=gcc
 CFLAGS=-g -Wall
 SRC=src
 OBJ=obj
@@ -17,3 +17,6 @@ $(OBJ)/%.o: $(SRC)/%.c
 
 clean:
 	$(RM) -r $(BINDIR)/* $(OBJ)/*
+
+run:
+	$(BIN) "test.bf"
