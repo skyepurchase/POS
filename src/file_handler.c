@@ -21,5 +21,7 @@ char *file_to_string(char *filename) {
         fread(buffer, 1, length, file);
     }
 
+    fclose(file);
+
     return buffer;
 }
