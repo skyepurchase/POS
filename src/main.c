@@ -3,6 +3,7 @@
 #include <unistd.h>
 
 #include "file_handler.h"
+#include "parser.h"
 
 int main(int argc, char *argv[]) {
     if (argc != 3) {
@@ -17,23 +18,9 @@ int main(int argc, char *argv[]) {
        return -1;
     }
 
-    FILE *file_to_write = fopen(argv[2], "w");
+    token *tokens = tokenize(program);
+    print_tokens(tokens);
 
-    if (file_to_write == NULL) {
-        printf("Output file could not be opened!\n");
-        return -1;
-    }
-
-    while (*program != '\0') {
-        char c = *program;
-        if (c == '+') {
-            c = '-';
-        }
-        fputc(c, file_to_write);
-        program++;
-    }
-
-    fclose(file_to_write);
-
+    free_tokens(tokens);
     return 0;
 }
