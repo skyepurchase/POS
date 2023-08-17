@@ -3,4 +3,4 @@ Pseudo-Operating System. I have an 8-bit computer and want to write brainf**k pr
 
 # DEVLOG
 
-[A semi-regularly updated project log of progress](atp45.user.srcf.net/projects/pos).
+[A semi-regularly updated project log of progress](https://atp45.user.srcf.net/projects/pos).
